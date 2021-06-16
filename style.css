@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    font-size: 15px;
+    --prim-bright-orange: hsl(31, 77%, 52%);
+    --prim-dark-cyan: hsl(184, 100%, 22%);
+    --prim-very-dark-cyan: hsl(179, 100%, 13%);
+
+    --neu-transp-white: hsla(0, 0%, 100%, 0.75);
+    --neu-very-light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--neu-very-light-gray);
+    color: var(--neu-transp-white);
+    font-weight: 400;
+}
+
+main {
+    min-width: 600px;
+    z-index: 1;
+    display: flex;
+    margin: 1em;
+}
+
+section {
+    display: flex;
+    padding: 5.85em 7em 5.85em 5.85em;
+    width: 800px;
+    min-width: 300px;
+}
+
+div img {
+    margin-top: 0.75em;
+    margin-left: 0.75em;
+}
+
+div h1 {
+    color: var(--neu-very-light-gray);
+    font-size: 2.25rem;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+    margin-left: 0.75em;
+    font-weight: 700;
+}
+
+div p {
+    color: var(--neu-transp-white);
+    line-height: 1.5em;
+    margin-bottom: 5em;
+    margin-left: 0.75em;
+
+}
+
+.sedans-column {
+    background: var(--prim-bright-orange);
+    height: 500px;
+    border-radius: 10px 0px 0px 10px;
+    width: 100em;
+}
+
+.sedans-column button{
+    color: var(--prim-bright-orange);
+    margin-top: 6.5em;
+
+}
+
+.sedans-column button:hover{
+    background: var(--prim-bright-orange);
+    color: var(--neu-very-light-gray);
+    border-style: solid;
+    border-color: var(--neu-transp-white);
+}
+
+.suv-column {
+    background: var(--prim-dark-cyan);
+    height: 500px;
+    width: 100em;
+}
+
+.suv-column button {
+    color: var(--prim-dark-cyan);
+}
+
+.suv-column button:hover {
+    background: var(--prim-dark-cyan);
+    color: var(--neu-very-light-gray);
+    border-style: solid;
+    border-color: var(--neu-transp-white);
+}
+
+.luxury-column {
+    background: var(--prim-very-dark-cyan);
+    height: 500px;
+    border-radius: 0 10px 10px 0;
+    width: 100em;
+}
+
+.luxury-column button {
+    color: var(--prim-very-dark-cyan);
+    margin-top: 6.5em;
+
+}
+
+.luxury-column button:hover {
+    background: var(--prim-very-dark-cyan);
+    color: var(--neu-very-light-gray);
+    border-style: solid;
+    border-color: var(--neu-transp-white);
+}
+
+button {
+    margin-top: 8em;
+    margin-left: 0.75em;
+    border-radius: 35px;
+    height: 3em;
+    width: 9em;
+    background: var(--neu-very-light-gray);
+    font-family: 'Lexend Deca', sans-serif;
+    border-style: none;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.75rem;
+    text-align: center;
+    margin-left: 14em;
+    color: var(--prim-very-dark-cyan);
+    margin-bottom: 10px;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--prim-bright-orange);
+    font-weight: bold;
+}
+
+
+.attribution a:hover {
+  color: var(--prim-very-dark-cyan);
+}
+
+@media only screen and (max-width: 1024px) {
+  :root {
+    font-size: 12px;
+  }
+    section {
+    padding: 3em 4.5em 3em 3em;
+  }
+
+    .suv-column button{
+      margin-top: 6.5em;
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.75rem;
+    text-align: center;
+    margin-left: 17.5em;
+    color: var(--prim-very-dark-cyan);
+    margin-bottom: 10px;
+  }
+
+}
+
+@media only screen and (max-width: 625px) {
+    body {
+        flex-direction: column;
+    }
+
+    main {
+        flex-direction: column-reverse;
+        min-width: 200px;
+        margin: 1em 10px 10px;
+    }
+
+    section {
+        width: 350px;
+        flex-direction: column;
+        font-size: 1.1rem;
+        margin-bottom: 2em;
+        line-height: 1.5em;
+    }
+
+    .sedans-column {
+        width: 300px;
+        height: 380px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .suv-column {
+        width: 300px;
+        height: 380px;
+
+    }
+
+    .luxury-column {
+        width: 300px;
+        height: 380px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .attribution {
+        position: relative;
+        margin-top: 3em;
+        margin-left: 4.5em;
+    }
+
+}
